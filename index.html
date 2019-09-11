@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!--Generic Style-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--CSS for the switch checkbox element-->
+    <link rel="stylesheet" href="css/misc.css">
+    <!--Media Queries-->
+    <link rel="stylesheet" href="css/queries.css">
+
+
+    <title>GivJobPls</title>
+</head>
+
+<body>
+<div class="container-full">
+
+
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand alenGitLink" href="https://github.com/Teraln">Alen's Weather</a>
+
+
+        <div class="ml-auto navbar-nav">
+            <form class="form-inline md-form form-sm m-0 cityNameForm" id="CityNameForm">
+                <input name="cityname" id="location-input" class="form-control form-control-sm ml-3 w-75 cityInputBox"
+                       type="text"
+                       placeholder="Your town" aria-label="Search" autocomplete="off">
+                <button class="CitySubmitButton" type="submit">
+                    <i class="fas fa-search active navSearchButton" aria-hidden="true"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
+
+    <!--Error message-->
+    <div class="col-lg-4 offset-lg-4 col-md-10 offset-md-1 errorMessage hidden text-center">Your location was not found...</div>
+
+    <!--CURRENT WEATHER-->
+
+    <div class="container current-weather-container">
+        <!--City Name-->
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center cityName"></div>
+        </div>
+        <!--Current Temp-->
+        <div class="row">
+            <div class="col-12  d-flex justify-content-center">
+                <!--Status icon-->
+                <div class="col-lg-1 col-md-2 col-xs-3 d-flex justify-content-end iconContainer">
+                    <img class="align-self-center weatherStatusIcon" alt="Weather Status">
+                </div>
+                <!--Temperature-->
+                <div class="col-lg-1 col-md-2 col-xs-3 d-flex justify-content-center mainTempContainer">
+                    <span class="align-self-center mainTemp"></span>
+                </div>
+                <!--Temperature unit-->
+                <div class="col-lg-1 col-md-2 col-xs-3 d-flex justify-content-left temperatureUnit hidden">
+                    <label class="rockerClass rocker rocker-small m-0">
+                        <input class="rockerPosition" type="checkbox">
+                        <span class="switch-left">&#176;C</span>
+                        <span class="switch-right">&#176;F</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!--Weather Description-->
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <span class="weatherDescription"></span>
+            </div>
+        </div>
+
+        <!--Humidity-->
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center humidityDiv">
+                <span><i class="fas fa-tint hidden"></i></span><span class="humidity"></span>
+            </div>
+        </div>
+    </div>
+
+    <!--WEATHER FORECAST-->
+    <div class="container forecast-weather-container">
+        <div class="row">
+
+            <div class="forecast-day-0 col-2 offset-1"></div>
+
+            <div class="forecast-day-1 col-2"></div>
+
+            <div class="forecast-day-2 col-2"></div>
+
+            <div class="forecast-day-3 col-2"></div>
+
+            <div class="forecast-day-4 col-2"></div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!--Custom JS-->
+<script src="js/weatherApi.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

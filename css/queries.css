@@ -1,0 +1,517 @@
+/*PORTRAIT*/
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) and (orientation: portrait) {
+    .errorMessage {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+
+    .alenGitLink {
+        font-size: 1em;
+        margin-right: 0;
+    }
+
+    .cityNameForm {
+        justify-content: flex-end;
+    }
+
+    .cityInputBox {
+        max-width: 50%;
+    }
+
+    .cityName {
+        margin: 3% 0 3% 0;
+    }
+
+    .mainTempContainer {
+        padding: 0;
+    }
+
+    .iconContainer {
+        padding-right: 0;
+    }
+
+    .mainTemp {
+        font-size: 3em;
+    }
+
+    .rocker-small {
+        font-size: 0.5em; /* Sizes the switch */
+    }
+
+    .temperatureUnit {
+        padding-left: 0;
+    }
+
+    /*Forecast*/
+    .forecast-weather-container {
+        margin-top: 20%;
+    }
+
+    .forecast-day-0,
+    .forecast-day-1,
+    .forecast-day-2,
+    .forecast-day-3,
+    .forecast-day-4 {
+        padding: 0;
+
+    }
+
+    .F-date {
+        font-size: 0.9em;
+    }
+
+    .F-icon {
+        padding: 0;
+    }
+
+    .F-temperatures {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .F-max-temp {
+        font-size: 0.8em;
+    }
+
+    .F-min-temp {
+        font-size: 0.7em;
+    }
+
+    .F-max-temp span {
+        margin: 0;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 768px) and (orientation: portrait) {
+    .errorMessage {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+
+    .alenGitLink {
+        font-size: 1.6em;
+    }
+
+    .cityNameForm {
+        justify-content: flex-end;
+    }
+
+    .cityName {
+        margin: 6% 0 3% 0;
+        font-size: 4em;
+    }
+
+    .mainTemp {
+        font-size: 7em;
+    }
+
+    .rocker-small {
+        font-size: 0.5em; /* Sizes the switch */
+    }
+
+    .weatherDescription {
+        margin: 3% 0 0 0;
+    }
+
+    .humidityDiv {
+        margin: 2% 0 2% 0;
+    }
+
+    /*Forecast*/
+    .forecast-weather-container {
+        margin-top: 20%;
+    }
+
+    .forecast-day-0,
+    .forecast-day-1,
+    .forecast-day-2,
+    .forecast-day-3,
+    .forecast-day-4 {
+        padding: 0;
+
+    }
+
+    .F-date {
+        font-size: 1.2em;
+    }
+
+    .F-icon {
+        padding: 0;
+    }
+
+    .F-temperatures {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .F-max-temp {
+        font-size: 0.9em;
+    }
+
+    .F-min-temp {
+        font-size: 0.8em;
+    }
+
+    .F-max-temp span {
+        margin: 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 769px) and (max-width: 992px) and (orientation: portrait) {
+    .alenGitLink {
+        font-size: 1.2em;
+    }
+
+    .cityNameForm {
+        justify-content: flex-end;
+    }
+
+    .current-weather-container {
+        margin-top: 2%;
+    }
+
+    .cityName {
+        margin: 0% 0 0% 0;
+        font-size: 1em;
+    }
+
+    .mainTemp {
+        font-size: 3em;
+    }
+
+    .weatherDescription {
+        font-size: 1em;
+        margin: 0;
+    }
+
+    .humidityDiv {
+        font-size: 0.8em;
+    }
+
+    /*Forecast*/
+    .forecast-weather-container {
+        margin-top: 2%;
+        margin-bottom: 3%;
+    }
+
+    .forecast-day-0,
+    .forecast-day-1,
+    .forecast-day-2,
+    .forecast-day-3,
+    .forecast-day-4 {
+        padding: 0;
+
+    }
+
+    .F-date {
+        font-size: 1.1em;
+    }
+
+    .F-icon {
+        padding: 0;
+    }
+
+    .F-temperatures {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .F-max-temp {
+        font-size: 0.9em;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .F-min-temp {
+        font-size: 0.8em;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .F-max-temp span {
+        margin: 0;
+    }
+}
+
+/*Landscape*/
+
+/* Extra small devices (landscape phones, 575 and down) */
+@media (max-width: 575px) and (orientation: landscape) {
+    .errorMessage {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+
+    .alenGitLink {
+        font-size: 1em;
+        margin-right: 0;
+    }
+
+    .cityNameForm {
+        justify-content: flex-end;
+    }
+
+    .cityInputBox {
+        max-width: 60%;
+    }
+
+    .current-weather-container {
+        margin-top: 2%;
+    }
+
+    .cityName {
+        margin: 0 0 0 0;
+        font-size: 1.5em;
+    }
+
+    .mainTempContainer {
+        padding: 0;
+    }
+
+    .iconContainer {
+        padding-right: 0;
+    }
+
+    .mainTemp {
+        font-size: 2.5em;
+    }
+
+    .rocker-small {
+        font-size: 0.5em; /* Sizes the switch */
+    }
+
+    .temperatureUnit {
+        padding-left: 0;
+    }
+
+    .weatherDescription {
+        font-size: 1em;
+        margin-bottom: 0;
+    }
+
+    .fa-tint {
+        font-size: 0.8em;
+    }
+
+
+
+    .humidity {
+        font-size: 0.8em;
+        margin-bottom: 0;
+    }
+
+    /*Forecast*/
+    .forecast-weather-container {
+        margin-top: 1%;
+    }
+
+    .forecast-day-0,
+    .forecast-day-1,
+    .forecast-day-2,
+    .forecast-day-3,
+    .forecast-day-4 {
+        padding: 0;
+
+    }
+
+    .F-date {
+        font-size: 0.9em;
+    }
+
+    .F-icon {
+        padding: 0;
+    }
+
+    .F-temperatures {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .F-max-temp {
+        padding-top: 0;
+        font-size: 0.7em;
+    }
+
+    .F-min-temp {
+        padding-top: 0;
+        font-size: 0.6em;
+    }
+
+    .F-max-temp span {
+        margin: 0;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 768px) and (orientation: landscape) {
+    .errorMessage {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+
+    .alenGitLink {
+        font-size: 1.2em;
+        margin-right: 0;
+    }
+
+    .cityNameForm {
+        justify-content: flex-end;
+    }
+
+    .cityInputBox {
+
+    }
+
+    .current-weather-container {
+        margin-top: 2%;
+    }
+
+    .cityName {
+        font-size: 1.4em;
+    }
+
+    .mainTemp {
+        font-size: 2.5em;
+    }
+
+    .rocker-small {
+        font-size: 0.5em; /* Sizes the switch */
+    }
+
+    .weatherDescription {
+        font-size: 0.7em;
+        margin-bottom: 1%;
+    }
+
+    .humidityDiv {
+        margin-bottom: 0;
+    }
+
+    .humidity {
+        font-size: 0.7em;
+    }
+
+    .fa-tint {
+        font-size: 0.7em;
+    }
+
+    /*Forecast*/
+    .forecast-weather-container {
+        margin-top: 0;
+    }
+
+    .forecast-day-0,
+    .forecast-day-1,
+    .forecast-day-2,
+    .forecast-day-3,
+    .forecast-day-4 {
+        padding: 0;
+
+    }
+
+    .F-date {
+        font-size: 1em;
+    }
+
+    .F-icon {
+        padding: 0;
+    }
+
+    .F-temperatures {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .F-max-temp {
+        font-size: 0.8em;
+    }
+
+    .F-min-temp {
+        font-size: 0.7em;
+    }
+
+    .F-max-temp span {
+        margin: 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 769px) and (max-width: 992px) and (orientation: landscape) {
+    .alenGitLink {
+        font-size: 1.2em;
+    }
+
+    .cityNameForm {
+        justify-content: flex-end;
+    }
+
+    .current-weather-container {
+        margin-top: 2%;
+    }
+
+    .cityName {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    .mainTemp {
+        font-size: 3em;
+    }
+
+    .weatherDescription {
+        font-size: 1em;
+        margin: 0;
+    }
+
+    .humidityDiv {
+        font-size: 0.8em;
+    }
+
+    /*Forecast*/
+    .forecast-weather-container {
+        margin-top: 2%;
+        margin-bottom: 3%;
+    }
+
+    .forecast-day-0,
+    .forecast-day-1,
+    .forecast-day-2,
+    .forecast-day-3,
+    .forecast-day-4 {
+        padding: 0;
+
+    }
+
+    .F-date {
+        font-size: 1.1em;
+    }
+
+    .F-icon {
+        padding: 0;
+    }
+
+    .F-temperatures {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .F-max-temp {
+        font-size: 0.9em;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .F-min-temp {
+        font-size: 0.8em;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .F-max-temp span {
+        margin: 0;
+    }
+}

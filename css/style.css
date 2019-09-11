@@ -1,0 +1,204 @@
+html, body {
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.container-full {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url("../images/Sunset_2007-1.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    background-color: transparent;
+    height: 3.5em;
+    color: #FFFFFF !important;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .16), 0 8px 40px 0 rgba(0, 0, 0, .12);
+}
+
+.alenGitLink {
+    font-weight: lighter;
+    color: #FFFFFF !important;
+    font-size: 1.7em;
+}
+
+.navbar-brand {
+    color: #FFFFFF;
+}
+
+.configureButtonContainer {
+    max-width: fit-content;
+
+}
+
+.configureButton {
+    font-size: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.navSearchButton {
+    background-color: transparent;
+    transition: all .2s ease-in-out;
+}
+
+.navSearchButton:hover {
+    transform: scale(1.7);
+    color: #FFFFFF;
+}
+
+.CitySubmitButton {
+    background-color: transparent;
+    border: 0;
+}
+
+.cityInputBox {
+    color: #FFFFFF;
+    font-family: Roboto, sans-serif;
+    font-weight: lighter;
+}
+
+.cityInputBox:focus {
+    color: #FFFFFF;
+}
+
+.cityInputBox::placeholder {
+    font-family: Roboto, sans-serif;
+    font-weight: lighter;
+    color: #FFFFFF;
+}
+
+
+/*TOP, CURRENT WEATHER*/
+
+.current-weather-container {
+    margin-top: 7%;
+}
+
+.errorMessage {
+    background: #dd6843;
+    border-radius: 20px;
+    font-family: Roboto, sans-serif;
+    font-size: 2em;
+    color: #FFFFFF;
+    font-weight: lighter;
+    padding: 0.7%;
+    margin-top: 5%;
+}
+
+.cityName {
+    font-size: 2.4em;
+    font-family: Roboto, sans-serif;
+    font-weight: lighter;
+    color: #FFFFFF;
+}
+
+.mainTempContainer {
+    padding: 0;
+}
+
+.mainTemp {
+    font-size: 4em;
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+
+
+.iconContainer {
+    padding-right: 0;
+}
+
+.temperatureUnit {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    padding-left: 0;
+}
+
+.rocker {
+    font-size: 50%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.weatherDescription {
+    font-size: 1.2em;
+    font-family: Roboto, sans-serif;
+    font-weight: lighter;
+    color: #FFFFFF;
+    margin-bottom: 0.8em;
+}
+
+.humidity {
+    font-size: 1.2em;
+    font-family: Roboto, sans-serif;
+    font-weight: lighter;
+    color: #FFFFFF;
+    padding-left: 0.15em;
+}
+
+.fa-tint {
+    color: #FFFFFF;
+    padding-right: 0.15em;
+}
+
+.tab-pane > .row {
+    height: 100px;
+}
+
+/*BOTTOM, FORECAST*/
+
+.forecast-weather-container {
+    margin-top: 5%;
+}
+
+.forecast-day-0,
+.forecast-day-1,
+.forecast-day-2,
+.forecast-day-3,
+.forecast-day-4 {
+    padding: 0;
+
+}
+
+.F-date {
+    color: #FFFFFF;
+    font-size: 1.6em;
+    font-family: Roboto, sans-serif;
+    font-weight: lighter;
+    /*max-width: fit-content;*/
+}
+
+.F-temperatures {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.F-max-temp {
+    padding: 4%;
+    font-size: 1.4em;
+    font-family: Roboto, sans-serif;
+    font-weight: bolder;
+    color: #FFFFFF;
+}
+
+.F-min-temp {
+    padding: 4%;
+    font-size: 1em;
+    font-family: Roboto, sans-serif;
+    font-weight: bolder;
+    color: #d5c6c5;
+}
