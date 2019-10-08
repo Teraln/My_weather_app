@@ -1,14 +1,16 @@
 /*PORTRAIT*/
 
+@media (max-width: 340px) {
+    .alenGitLink {
+        display: none;
+    }
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) and (orientation: portrait) {
-    .errorMessage {
-        margin-right: 3%;
-        margin-left: 3%;
-    }
 
     .alenGitLink {
-        font-size: 1em;
+        font-size: 0.9em;
         margin-right: 0;
     }
 
@@ -17,7 +19,9 @@
     }
 
     .cityInputBox {
-        max-width: 50%;
+        max-width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .cityName {
@@ -86,11 +90,6 @@
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 768px) and (orientation: portrait) {
-    .errorMessage {
-        margin-right: 3%;
-        margin-left: 3%;
-    }
-
     .alenGitLink {
         font-size: 1.6em;
     }
@@ -105,7 +104,7 @@
     }
 
     .mainTemp {
-        font-size: 7em;
+        font-size: 4.5em;
     }
 
     .rocker-small {
@@ -175,12 +174,12 @@
     }
 
     .cityName {
-        margin: 0% 0 0% 0;
+        margin: 0 0 0 0;
         font-size: 1em;
     }
 
     .mainTemp {
-        font-size: 3em;
+        font-size: 1.2em;
     }
 
     .weatherDescription {
@@ -241,10 +240,6 @@
 
 /* Extra small devices (landscape phones, 575 and down) */
 @media (max-width: 575px) and (orientation: landscape) {
-    .errorMessage {
-        margin-right: 3%;
-        margin-left: 3%;
-    }
 
     .alenGitLink {
         font-size: 1em;
@@ -298,7 +293,6 @@
     }
 
 
-
     .humidity {
         font-size: 0.8em;
         margin-bottom: 0;
@@ -348,10 +342,6 @@
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 768px) and (orientation: landscape) {
-    .errorMessage {
-        margin-right: 3%;
-        margin-left: 3%;
-    }
 
     .alenGitLink {
         font-size: 1.2em;

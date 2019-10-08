@@ -1,6 +1,4 @@
 class UI {
-    constructor() {
-    }
 
     //Init stored data (units, last location)
 
@@ -9,19 +7,19 @@ class UI {
     //********MISC********
 
     initLS() {
-        //Set the default state of rocker at first load (Celsius)
-        let temperatureState = localStorage.getItem('state');
+        //Set the default state of rocker (and the user's unit setting) at first load (true=Celsius, false=fahrenheit)
+        const temperatureState = localStorage.getItem('state');
         if (JSON.parse(temperatureState) === null) {
-
-            localStorage.setItem("state", true);
+            localStorage.setItem("state", "true");
         }
 
         const LSCity = localStorage.getItem('City');
 
-
         //Show data for last city searched on load
-        if (LSCity !== null) {
+        if (LSCity) {
             getUserInput(LSCity);
+        } else {
+            this.createWelcomeMessage();
         }
 
         this.setState();
@@ -29,13 +27,32 @@ class UI {
         return undefined;
     }
 
-    //Display some elements that are hidden by default
+    createWelcomeMessage() {
+        const errorMessage = document.querySelector('.errorMessage');
+        const container = errorMessage.parentNode;
+        const welcomeText = "Welcome to Alen\'s Weather. Please enter the name of your town...";
+        const welcomeClassList = "col-lg-4 offset-lg-4 col-md-10 offset-md-1 welcomeMessage text-center";
+        const welcomeDiv = this.createHtmlElement('div', welcomeClassList, welcomeText);
+
+        // welcomeDiv.appendChild(welcomeParagraph).insertBefore(container, errorMessage);
+        container.insertBefore(welcomeDiv, errorMessage);
+    }
+
+    //Display some elements that are hidden by default and hide the initial instructions/welcome message
     displayHidden() {
+
+        const welcome = document.querySelector('.welcomeMessage');
         const drop = document.querySelector('.fa-tint');
         const rocker = document.querySelector('.temperatureUnit');
 
+        if (welcome) {
+            welcome.classList.add('hidden');
+        }
+
         drop.classList.remove('hidden');
         rocker.classList.remove('hidden');
+
+        return undefined
     }
 
     //HTML element insert
@@ -78,7 +95,7 @@ class UI {
 
     //Display name of city
     displayCityName(city, countryCode) {
-        let cityName = document.querySelector('.cityName');
+        const cityName = document.querySelector('.cityName');
         localStorage.setItem('City', city);
         cityName.innerHTML = `${city}, ${countryCode}`;
 
@@ -87,7 +104,7 @@ class UI {
 
     //Display Humidity
     displayHumidity(data) {
-        let humidity = document.querySelector('.humidity');
+        const humidity = document.querySelector('.humidity');
 
         humidity.innerHTML = `${data}%`;
 
@@ -97,8 +114,8 @@ class UI {
 
     setState() {
         //Apply LS temperature state (C/F)
-        let temperatureState = localStorage.getItem('state');
-        let switchCheckedAttr = document.querySelector('.rockerPosition');
+        const temperatureState = localStorage.getItem('state');
+        const switchCheckedAttr = document.querySelector('.rockerPosition');
 
         if (JSON.parse(temperatureState) === true) {
             switchCheckedAttr.setAttribute('checked', "checked");
@@ -112,7 +129,7 @@ class UI {
 
     //Toggle temperature
     toggleTemperature() {
-        let temperatureState = localStorage.getItem('state');
+        const temperatureState = localStorage.getItem('state');
         if (JSON.parse(temperatureState) === true) {
             localStorage.setItem('state', false);
         } else if (JSON.parse(temperatureState) === false) {
@@ -125,16 +142,14 @@ class UI {
 
     //Display Temperature
     displayTemperature(data) {
-        let temperatureContainer = document.querySelector('.mainTemp');
-        let tempUnit = document.querySelector('.tempUnit');
-
+        const temperatureContainer = document.querySelector('.mainTemp');
 
         //Get data from LS
-        let celsius = this.calculateTemperature(data).celsius;
+        const celsius = this.calculateTemperature(data).celsius;
 
-        let fahrenheit = this.calculateTemperature(data).fahrenheit;
+        const fahrenheit = this.calculateTemperature(data).fahrenheit;
 
-        let state = JSON.parse(localStorage.getItem('state'));
+        const state = JSON.parse(localStorage.getItem('state'));
 
         //Display temperature unit depending on state in LS
 
@@ -152,7 +167,7 @@ class UI {
 
         const dataCapitalisedArr = words.split(' ');
 
-        let dataCapitalisedTemp = [];
+        const dataCapitalisedTemp = [];
 
         for (let i = 0; i < dataCapitalisedArr.length; i++) {
             dataCapitalisedTemp.push(dataCapitalisedArr[i].charAt(0).toUpperCase() + dataCapitalisedArr[i].slice(1))
@@ -171,7 +186,7 @@ class UI {
         //Weather Description - Icon
         const weatherIcon = document.querySelector('.weatherStatusIcon');
 
-        let iconCode = data.icon.split('').splice(0, 2);
+        const iconCode = data.icon.split('').splice(0, 2);
         const iconString = iconCode.join('');
 
         weatherIcon.setAttribute("src", `images/${iconString}.png`);
@@ -188,7 +203,7 @@ class UI {
         //dayN contains all the data per day
         const forecastArray = data.list;
 
-        let days = {
+        const days = {
             day0: [],
             day1: [],
             day2: [],
@@ -215,7 +230,7 @@ class UI {
         //Get min, max temperature
         function getMinMaxTemperature(dayArray) {
 
-            let minMaxArray = [];
+            const minMaxArray = [];
 
             for (let i = 0; i < dayArray.length; i++) {
 
@@ -237,7 +252,7 @@ class UI {
         //Get "average" weather description
         function getAvgWeatherDescription(dayArray) {
 
-            let icon = [];
+            const icon = [];
 
             for (let i = 0; i < dayArray.length; i++) {
                 icon.push(dayArray[i].weather[0].icon);
@@ -245,7 +260,7 @@ class UI {
 
 
             for (let i = 0; i < icon.length; i++) {
-                let iconCode = icon[i].split('').splice(0, 2).join('');
+                const iconCode = icon[i].split('').splice(0, 2).join('');
                 icon[i] = iconCode
             }
 
@@ -276,40 +291,16 @@ class UI {
             }
         }
 
-        //Create final objects with data per each day
-        const day0object = {
-            temperature: getMinMaxTemperature(days.day0),
-            icon: getAvgWeatherDescription(days.day0),
-            date: getDateForDisplay(dateDays[0])
-        };
-
-        const day1object = {
-            temperature: getMinMaxTemperature(days.day1),
-            icon: getAvgWeatherDescription(days.day1),
-            date: getDateForDisplay(dateDays[1])
-        };
-
-        const day2object = {
-            temperature: getMinMaxTemperature(days.day2),
-            icon: getAvgWeatherDescription(days.day2),
-            date: getDateForDisplay(dateDays[2])
-        };
-
-        const day3object = {
-            temperature: getMinMaxTemperature(days.day3),
-            icon: getAvgWeatherDescription(days.day3),
-            date: getDateForDisplay(dateDays[3])
-        };
-
-        const day4object = {
-            temperature: getMinMaxTemperature(days.day4),
-            icon: getAvgWeatherDescription(days.day4),
-            date: getDateForDisplay(dateDays[4])
-        };
-
-        //Final Array used for injection
+        let day0object, day1object, day2object, day3object, day4object;
         const forecastList = [day0object, day1object, day2object, day3object, day4object];
 
+        for (let i = 0; i < forecastList.length; i++) {
+            forecastList[i] = {
+                temperature: getMinMaxTemperature(days[`day${i}`]),
+                icon: getAvgWeatherDescription(days[`day${i}`]),
+                date: getDateForDisplay(dateDays[i])
+            }
+        }
         return forecastList
     }
 
@@ -319,8 +310,8 @@ class UI {
 
         //Loop and insert html per day
         for (let i = 0; i < dataArr.length; i++) {
-            let dayClass = `.forecast-day-${i}`;
-            let currDay = document.querySelector(dayClass);
+            const dayClass = `.forecast-day-${i}`;
+            const currDay = document.querySelector(dayClass);
 
             //If elements (divs) already exist, remove them
             while (currDay.firstChild) {
@@ -332,11 +323,11 @@ class UI {
             //Icon
             const iconDiv = currDay.appendChild(this.createHtmlElement('div', 'F-icon col-12 text-center', ''));
             const iconImg = iconDiv.appendChild(this.createHtmlElement('img', 'F-icon-img', ''));
-            let iconCode = dataArr[i].icon.split('').splice(0, 2);
+            const iconCode = dataArr[i].icon.split('').splice(0, 2);
             const iconString = iconCode.join('');
             iconImg.setAttribute('src', `images/${iconString}.png`);
             //Calculate temps, ready for insertion
-            let state = JSON.parse(localStorage.getItem('state'));
+            const state = JSON.parse(localStorage.getItem('state'));
             let minTemp, maxTemp;
 
             if (state) {
@@ -357,7 +348,6 @@ class UI {
     // ********ERRORS*********
 
     cityNotFound() {
-        //TODO remove current&forecast on a timer and display errorMessage
         const current = document.querySelector('.current-weather-container');
         const forecast = document.querySelector('.forecast-weather-container');
         const error = document.querySelector('.errorMessage');
@@ -373,9 +363,9 @@ class UI {
         setTimeout(function () {
                 arr.forEach(function (e) {
                     e.classList.remove('hidden');
-                })
+                });
 
-                error.classList.add('hidden')
+                error.classList.add('hidden');
                 input.focus();
             }
 

@@ -1,3 +1,5 @@
+
+
 html, body {
     min-height: 100%;
     min-width: 100%;
@@ -64,6 +66,7 @@ html, body {
     color: #FFFFFF;
     font-family: Roboto, sans-serif;
     font-weight: lighter;
+    margin-left: 0;
 }
 
 .cityInputBox:focus {
@@ -87,11 +90,24 @@ html, body {
     background: #dd6843;
     border-radius: 20px;
     font-family: Roboto, sans-serif;
-    font-size: 2em;
+    font-size: 1.6em;
     color: #FFFFFF;
     font-weight: lighter;
     padding: 0.7%;
     margin-top: 5%;
+}
+
+.welcomeMessage {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-family: Roboto, sans-serif;
+    font-size: 1.2em;
+    color: black;
+    font-weight: lighter;
+    padding: 0.7%;
+    margin-top: 5%;
+    box-shadow: 0 14px 20px 0 rgba(0, 0, 0, .16), 0 8px 40px 0 rgba(0, 0, 0, .12);
+
 }
 
 .cityName {
@@ -136,7 +152,7 @@ html, body {
 .weatherDescription {
     font-size: 1.2em;
     font-family: Roboto, sans-serif;
-    font-weight: lighter;
+    font-weight: 100;
     color: #FFFFFF;
     margin-bottom: 0.8em;
 }
@@ -200,5 +216,5 @@ html, body {
     font-size: 1em;
     font-family: Roboto, sans-serif;
     font-weight: bolder;
-    color: #d5c6c5;
+    color: #565050;
 }

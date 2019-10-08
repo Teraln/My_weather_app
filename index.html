@@ -9,6 +9,10 @@
     <!-- Bootstrap CSS -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Favicon tab picture -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
@@ -21,7 +25,7 @@
     <link rel="stylesheet" href="css/queries.css">
 
 
-    <title>GivJobPls</title>
+    <title>Alen's Weather</title>
 </head>
 
 <body>
@@ -45,9 +49,13 @@
         </div>
     </nav>
 
-    <!--Error message-->
-    <div class="col-lg-4 offset-lg-4 col-md-10 offset-md-1 errorMessage hidden text-center">Your location was not found...</div>
-
+    <!--Error message, Welcome message-->
+    <div class="col-lg-4 offset-lg-4 col-md-10 offset-md-1 errorMessage hidden text-center"><p>Your location was not
+        found...</p>
+    </div>
+    <!--<div class="col-lg-4 offset-lg-4 col-md-10 offset-md-1 welcomeMessage text-center"><p>
+        Welcome to Alen's Weather. Please enter the name of your town...</p></div>
+-->
     <!--CURRENT WEATHER-->
 
     <div class="container current-weather-container">
@@ -60,7 +68,7 @@
             <div class="col-12  d-flex justify-content-center">
                 <!--Status icon-->
                 <div class="col-lg-1 col-md-2 col-xs-3 d-flex justify-content-end iconContainer">
-                    <img class="align-self-center weatherStatusIcon" alt="Weather Status">
+                    <img class="align-self-center weatherStatusIcon">
                 </div>
                 <!--Temperature-->
                 <div class="col-lg-1 col-md-2 col-xs-3 d-flex justify-content-center mainTempContainer">
