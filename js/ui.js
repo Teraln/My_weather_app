@@ -55,7 +55,7 @@ class UI {
         return undefined
     }
 
-    //HTML element insert
+    //HTML element creation
     createHtmlElement(type, htmlClass, content) {
         const createdElement = document.createElement(type);
 

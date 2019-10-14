@@ -7,7 +7,7 @@
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575px) and (orientation: portrait) {
+@media (min-width: 341px) and (max-width: 575px) and (orientation: portrait) {
 
     .alenGitLink {
         font-size: 0.9em;
